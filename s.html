@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkyNova | Official Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-black z-50 p-4 flex justify-between items-center">
+    <img src="assets/images/logo.png" class="h-10" />
+    <ul class="flex gap-4 text-sm">
+      <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+      <li><a href="#about" class="hover:text-blue-400">About</a></li>
+      <li><a href="#vision" class="hover:text-blue-400">Vision</a></li>
+      <li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
+      <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+      <li><button onclick="toggleLanguage()" class="text-blue-400 hover:underline">AR / EN</button></li>
+    </ul>
+  </nav>
+
+  <!-- English Content -->
+  <div id="en-content">
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 text-center bg-cover bg-center h-screen flex flex-col justify-center items-center" style="background-image: url('assets/images/earth-at-night.jpg');">
+      <div class="bg-black bg-opacity-60 p-6 rounded-lg">
+        <h1 class="text-4xl font-bold mb-4 text-white">Towards a Smarter, Safer Space Future</h1>
+        <p class="text-lg text-gray-200">Innovative space technologies powered by AI</p>
+      </div>
+    </section>
+
+    <!-- About -->
+<section id="about" class="relative pt-24 text-white h-screen bg-cover bg-center" style="background-image: url('assets/images/thumb-1920-807186.jpg');">
+  
+    <!-- الخلفية السوداء تغطي الصورة -->
+    <div class="absolute inset-0 bg-black bg-opacity-80 z-0"></div>
+    
+    <!-- محتوى الشعار + النص -->
+    <div class="relative z-10 h-full flex flex-col md:flex-row items-center justify-center px-6 gap-10">
+      
+      <!-- الشعار يسار -->
+      <div class="w-full md:w-1/3 flex justify-center">
+        <img src="assets/images/logo.png" class="w-48 md:w-60 rounded-xl shadow-xl" alt="SkyNova Logo">
+      </div>
+  
+      <!-- النص يمين -->
+      <div class="w-full md:w-2/3 text-center md:text-left">
+        <h2 class="text-3xl text-blue-400 font-bold mb-4">About Us</h2>
+        <p class="text-lg max-w-xl leading-relaxed">
+          SkyNova is a Saudi-based company specializing in space and AI technologies.
+          We aim to lead sustainable innovation in space through cutting-edge artificial intelligence
+          and real-time satellite data solutions.
+        </p>
+      </div>
+  
+    </div>
+  </section>
+
+    <!-- Vision -->
+    <section id="vision" class="p-10 flex flex-col md:flex-row justify-center items-center gap-10 bg-gray-900 text-left">
+      <img src="assets/images/founder_transparent.png" class="w-64 rounded-xl shadow-lg" alt="Founder" />
+      <div>
+        <h3 class="text-2xl text-blue-400 font-bold">Founder & CEO</h3>
+        <p class="mb-4 text-lg">Eng. Mishaal Al-Qarni</p>
+        <h4 class="text-xl text-blue-300 font-semibold">Our Vision</h4>
+        <p class="max-w-md text-md">To lead the future of sustainable and intelligent space technologies for a safer world.</p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+<section id="projects" class="relative p-10 text-center bg-cover bg-center" style="background-image: url('assets/images/earth-at-night.jpg');">
+  
+  <!-- طبقة سوداء شفافة فوق الخلفية -->
+  <div class="absolute inset-0 bg-black bg-opacity-70 z-0"></div>
+
+  <!-- المحتوى -->
+  <div class="relative z-10 max-w-4xl mx-auto text-white space-y-10 text-left">
+    <h2 class="text-3xl text-blue-400 mb-6 text-center">Our Projects</h2>
+
+    <div>
+      <h3 class="text-xl text-blue-300 font-semibold">🛰️ SA-Skysave</h3>
+      <p class="text-md leading-relaxed mt-2">
+        SkyNova AI-powered solution for <strong>space debris management</strong>. It tracks, predicts, and avoids collisions with space debris using real-time data and advanced neural networks. This project aims to protect satellites, space missions, and orbital infrastructure to ensure a sustainable space environment.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-xl text-blue-300 font-semibold">🌤️ Smart Weather Forecasting System</h3>
+      <p class="text-md leading-relaxed mt-2">
+        A next-gen weather intelligence platform powered by <strong>satellite imagery and deep learning</strong>. It delivers hyper-local weather predictions and early warnings for floods and storms, especially in urban areas. This system is designed to enhance disaster response and support climate resilience in Saudi Arabia and beyond.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <!-- Contact -->
+    <section id="contact" class="p-10 bg-gray-900 text-center">
+      <h2 class="text-3xl text-blue-400 mb-4">Contact Us</h2>
+      <form method="POST" action="mailto:Mish3aal.q@gmail.com" class="max-w-md mx-auto space-y-4">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 rounded bg-gray-800 text-white">
+        <input type="email" name="email" placeholder="Email Address" required class="w-full p-2 rounded bg-gray-800 text-white">
+        <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-2 rounded bg-gray-800 text-white"></textarea>
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- Arabic Content -->
+  <div id="ar-content" class="hidden" dir="rtl">
+    <!-- Hero -->
+    <section id="home" class="pt-24 text-center bg-cover bg-center h-screen flex flex-col justify-center items-center" style="background-image: url('assets/images/satellite.jpg');">
+      <div class="bg-black bg-opacity-60 p-6 rounded-lg">
+        <h1 class="text-4xl font-bold mb-4 text-white">نحو مستقبل فضائي أذكى وأكثر أمانًا</h1>
+        <p class="text-lg text-gray-200">حلول فضائية مبتكرة تعتمد على الذكاء الاصطناعي</p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="pt-10 text-center bg-cover bg-center h-screen flex flex-col justify-center items-center" style="background-image: url('assets/images/satellite.jpg');">
+      <h2 class="text-3xl text-blue-400 mb-4">من نحن</h2>
+      <p class="max-w-2xl mx-auto text-lg">SkyNova هي شركة سعودية متخصصة في تقنيات الفضاء والذكاء الاصطناعي، تهدف إلى قيادة الابتكار المستدام في الفضاء من خلال حلول تعتمد على الذكاء الاصطناعي وبيانات الأقمار الصناعية.</p>
+    </section>
+
+    <!-- Vision -->
+    <section id="vision" class="p-10 flex flex-col md:flex-row justify-center items-center gap-10 bg-gray-900 text-right">
+      <img src="assets/images/founder_transparent.png" class="w-64 rounded-xl shadow-lg" alt="Founder" />
+      <div>
+        <h3 class="text-2xl text-blue-400 font-bold">المؤسس والمدير التنفيذي</h3>
+        <p class="mb-4 text-lg">م. مشعل القرني</p>
+        <h4 class="text-xl text-blue-300 font-semibold">رؤيتنا</h4>
+        <p class="max-w-md text-md">قيادة مستقبل التقنيات الفضائية الذكية والمستدامة لعالم أكثر أمانًا.</p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="p-10 bg-gray-800 text-center">
+      <h2 class="text-3xl text-blue-400 mb-6">مشاريعنا</h2>
+      <div class="max-w-4xl mx-auto space-y-10 text-right">
+        <div>
+          <h3 class="text-xl text-blue-300 font-semibold">🛰️ SA-Skysave</h3>
+          <p class="text-md leading-relaxed mt-2">نظام ذكي لإدارة الحطام الفضائي يعتمد على الذكاء الاصطناعي لتتبع وتفادي التصادمات المدارية، لحماية الأقمار الصناعية.</p>
+        </div>
+        <div>
+          <h3 class="text-xl text-blue-300 font-semibold">🌤️ التنبؤ الذكي بالطقس</h3>
+          <p class="text-md leading-relaxed mt-2">نظام يعتمد على صور الأقمار الصناعية والتعلم العميق لتقديم تنبؤات دقيقة وتنبيهات مبكرة للفيضانات والعواصف.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="p-10 bg-gray-900 text-center">
+      <h2 class="text-3xl text-blue-400 mb-4">تواصل معنا</h2>
+      <form method="POST" action="mailto:Mish3aal.q@gmail.com" class="max-w-md mx-auto space-y-4">
+        <input type="text" name="name" placeholder="اسمك" required class="w-full p-2 rounded bg-gray-800 text-white">
+        <input type="email" name="email" placeholder="البريد الإلكتروني" required class="w-full p-2 rounded bg-gray-800 text-white">
+        <textarea name="message" rows="5" placeholder="رسالتك" required class="w-full p-2 rounded bg-gray-800 text-white"></textarea>
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">إرسال</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black text-center py-4 text-gray-400">
+    &copy; 2025 SkyNova. All rights reserved.
+  </footer>
+
+  <script>
+    ScrollReveal().reveal('section', { duration: 1000, origin: 'bottom', distance: '50px', reset: true });
+    function toggleLanguage() {
+      document.getElementById('en-content').classList.toggle('hidden');
+      document.getElementById('ar-content').classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
